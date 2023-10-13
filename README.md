@@ -49,7 +49,7 @@ git add .
 Nous allons utiliser un dépôt que l'on va créer sur github.com,
 après connexion. Comme c'est un travail personnel, son URL sera git@github.com:EEnez/exe01html.git
 
-Nous créeons un nex Repository, puis nous copions la clef SSH :
+Nous créeons un new Repository, puis nous copions la clef SSH :
 
 git@github.com:EEnez/exe01html.git
 
@@ -64,3 +64,27 @@ Pour voir si ça a fonctionné :
 ```bash
 git remote -v
 ```
+
+## Envoi du projet
+
+```bash
+git push origin master
+```
+## Récupération du projet
+
+Si on souhaite récupérer que le `.git` (donc l'historique sans les fichiers)
+
+```bash
+git fetch origin master
+```
+
+Si on souhaite récupérer toute la branche `master`
+
+```bash
+git pull origin master
+```
+
+Si on a effectué des modifications en local non voulues ne permettant pas la récupération des fichiers (`merge error`).
+
+On peut utiliser un `git stash` pour faire une pseudo sauvegarde et revenir au dernier commit avant de refaire un `git pull`
+
